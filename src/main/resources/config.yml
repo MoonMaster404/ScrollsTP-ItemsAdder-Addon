@@ -1,0 +1,48 @@
+BlockTPBlock:
+  - LAVA
+  - BEDROCK
+
+ActivateEvent:
+  RIGHT_CLICK: true
+  LEFT_CLICK: true
+
+y: '10'
+x: 'SAFE'
+z: '10'
+
+Title:
+  Enabled: true
+  HadeIn: 10
+  FadeOut: 10
+  MainTitle: '&6&lTeleport'
+  SubTitle: '&fPlease wait'
+  DelayTP: 3
+
+Scrolls:
+  'RandomTP':
+    Enabled: true
+    Permission: 'example.permission'
+    ItemIA: ''
+    Activate:
+      RIGHT_CLICK: true
+      LEFT_CLICK: true
+  'HomeTP':
+    Enabled: true
+    Permission: 'example.permission'
+    ItemIA: ''
+    Activate:
+      RIGHT_CLICK: true
+      LEFT_CLICK: true
+  'CheckpointTP':
+    Enabled: true
+    Permission: 'example.permission'
+    ItemIA: ''
+    Activate:
+      RIGHT_CLICK: true
+      LEFT_CLICK: true
+
+Debug:
+  RandomTP: true
+  HomeTP: true
+  CheckpointTP: true
+  All: true
