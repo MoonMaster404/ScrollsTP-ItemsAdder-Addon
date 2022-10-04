@@ -1,17 +1,20 @@
+# Attention! Do not change this value if you do not want your config to be deleted!
+config-version: 1
+
+# You can block blocks that you don't want the player to be able to teleport to.
+# Use literal block ID without "minecraft:"
 BlockTPBlock:
   - LAVA
   - BEDROCK
 
-ActivateEvent:
-  RIGHT_CLICK: true
-  LEFT_CLICK: true
+# You can change the teleportation range using X, Y, Z coordinates:
+x: 10
+y: 0 #Attention! Don't change this value if you don't want players to spawn in the air.
+z: 10
 
-y: '10'
-x: 'SAFE'
-z: '10'
-
+# Setting the Title that the player will see before teleporting.
 Title:
-  Enabled: true
+  Enabled: true # Set to false if you want to disable Title.
   HadeIn: 10
   FadeOut: 10
   MainTitle: '&6&lTeleport'
@@ -19,21 +22,25 @@ Title:
   DelayTP: 3
 
 Scrolls:
-  'RandomTP':
+  # Gives the ability to teleport to a random point in the world in which the player is located.
+  RandomTP:
     Enabled: true
     Permission: 'example.permission'
     ItemIA: ''
     Activate:
       RIGHT_CLICK: true
       LEFT_CLICK: true
-  'HomeTP':
+  # Gives the ability to teleport a specific item to a house set by the player. Uses the Essentials hook.
+  HomeTP:
     Enabled: true
     Permission: 'example.permission'
     ItemIA: ''
     Activate:
       RIGHT_CLICK: true
       LEFT_CLICK: true
-  'CheckpointTP':
+  # Gives the ability to teleport to pre-prepared points. To install a checkpoint, use: /stp checkpoint add
+  # Permission: stp.checkpoint.add
+  CheckpointTP:
     Enabled: true
     Permission: 'example.permission'
     ItemIA: ''
@@ -41,8 +48,21 @@ Scrolls:
       RIGHT_CLICK: true
       LEFT_CLICK: true
 
+# Activate debug only if you need to report to the developer, or if something doesn't work for you.
 Debug:
-  RandomTP: true
-  HomeTP: true
-  CheckpointTP: true
-  All: true
+  RandomTP:
+   Enabled: true
+   Console: true
+   Message: true # Permission: stp.admin.debug or stp.*
+  HomeTP:
+   Enabled: true
+   Console: true
+   Message: true # Permission: stp.admin.debug or stp.*
+  CheckpointTP:
+    Enabled: true
+    Console: true
+    Message: true # Permission: stp.admin.debug or stp.*
+  All:
+    Enabled: true
+    Console: true
+    Message: true # Permission: stp.admin.debug or stp.*
