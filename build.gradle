@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.scrollstp.master'
+group = 'ScrollsTP'
 version = '0.0.1'
 
 repositories {
@@ -35,6 +35,13 @@ tasks.withType(JavaCompile).configureEach {
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
         options.release = targetJavaVersion
     }
+}
+
+compileJava.options.encoding = 'UTF-8' // устанавливает кодировку для компилируемого кода
+javadoc.options.encoding = 'UTF-8' // устанавливает кодировку для генерируемой документации
+compileTestJava.options.encoding = 'UTF-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 processResources {
