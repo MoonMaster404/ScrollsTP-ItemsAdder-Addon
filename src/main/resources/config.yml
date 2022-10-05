@@ -8,9 +8,9 @@ BlockTPBlock:
   - BEDROCK
 
 # You can change the teleportation range using X, Y, Z coordinates:
-x: 10
+x: 1000
 y: 0 #Attention! Don't change this value if you don't want players to spawn in the air.
-z: 10
+z: 1000
 
 # Setting the Title that the player will see before teleporting.
 Title:

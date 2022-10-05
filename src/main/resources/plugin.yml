@@ -2,3 +2,4 @@ name: ScrollsTP
 version: '${version}'
 main: com.scrollstp.master
 api-version: 1.19
+depend: [PlaceholderAPI, ItemsAdder]
